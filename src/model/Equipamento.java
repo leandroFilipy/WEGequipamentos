@@ -6,6 +6,7 @@ public class Equipamento {
     protected String nome;
     protected int quantidade;
     protected double preco;
+    static int quantidadeTotal;
 
 
     public Equipamento() {
@@ -20,6 +21,7 @@ public class Equipamento {
         this.nome = nome;
         this.quantidade = quantidade;
         this.preco = preco;
+        quantidadeTotal+= quantidadeTotal;
     }
 
     public String getCodigo() {

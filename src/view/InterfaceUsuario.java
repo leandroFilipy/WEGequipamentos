@@ -18,7 +18,11 @@ public class InterfaceUsuario {
         System.out.println("|| 3- Pesquisar Equipamentos por Código         ||");
         System.out.println("|| 4- Remover Equipamentos por Código           ||");
         System.out.println("|| 5- Movimentar Estoque                        ||");
-        System.out.println("|| 6- Sair                                      ||");
+        System.out.println("|| 6- Verificar a quantidade de Equipamentos    ||");
+        System.out.println("|| 7 - Relatórios de Estoque                    ||");
+        System.out.println("|| 8 - Busca Avançada por Nome                  ||");
+        System.out.println("|| 9 - Busca Avançada por Preço                 ||");
+        System.out.println("|| 10- Sair                                      ||");
         System.out.println("||----------------------------------------------||");
         System.out.print("||Insira aqui o que deseja: ");
         int decisao = read.nextInt();
@@ -197,13 +201,75 @@ public class InterfaceUsuario {
     public int removerQuantidade(){
 
         System.out.println("||----------------------------------------------||");
-        System.out.println("||            Remover Quantidade              ||");
+        System.out.println("||            Remover Quantidade                ||");
         System.out.println("||----------------------------------------------||");
         System.out.print("||Insira aqui qual o novo número de Quantidades: ");
 
         int removerQuantidade = read.nextInt();
 
         return removerQuantidade;
+    }
+    public void erroNoSistema(){
+
+        System.err.println("||----------------------------------------------||");
+        System.err.println("||   Houve um erro na execução do nosso Sistema  ||");
+        System.err.println("||----------------------------------------------||");
+
+    }
+    public void saindoDoSistema(){
+
+        System.err.println("||----------------------------------------------||");
+        System.err.println("||              Saindo do Sistema               ||");
+        System.err.println("||----------------------------------------------||");
+
+    }
+    public int qualQuantidadeVer(){
+
+        System.out.println("||----------------------------------------------||");
+        System.out.println("||   Do que voce quer verificar a quantidade?   ||");
+        System.out.println("||----------------------------------------------||");
+        System.out.println("|| 1- Ver quantidade de Todos os equipamentos   ||");
+        System.out.println("|| 2- Ver quantidade de Motores Elétricos       ||");
+        System.out.println("|| 3- Ver quantidade de Painel de Controle      ||");
+        System.out.print("||Insira aqui oque você deseja ver: ");
+
+        int qualQuantidadeVer = read.nextInt();
+
+        return qualQuantidadeVer;
+    }
+    public int menuRelatorios() {
+        System.out.println("||----------------------------------------------||");
+        System.out.println("||             Relatórios de Estoque            || ");
+        System.out.println("|| 1 - Quantidade total em estoque              ||");
+        System.out.println("|| 2 - Equipamento com maior preço              ||");
+        System.out.println("|| 3 - Equipamento com maior quantidade         ||");
+        System.out.println("|| 4 - Equipamentos com estoque baixo           ||");
+        System.out.print("Escolha uma opção: ");
+        return read.nextInt();
+    }
+    public String nomeBuscaAvancada() {
+        System.out.println("||----------------------------------------------||");
+        System.out.println("||             Relatórios de Estoque            || ");
+        System.out.println("|| 1 - Quantidade total em estoque              ||");
+        System.out.println("|| 2 - Equipamento com maior preço              ||");
+        System.out.println("|| 3 - Equipamento com maior quantidade         ||");
+        System.out.println("|| 4 - Equipamentos com estoque baixo           ||");
+        System.out.print("Escolha uma opção: ");
+        String nomeBuscaAvancada = read.next();
+
+        return nomeBuscaAvancada;
+    }
+    public double BuscaPrecoAvancada() {
+        System.out.println("||----------------------------------------------||");
+        System.out.println("||             Relatórios de Estoque            || ");
+        System.out.println("|| 1 - Quantidade total em estoque              ||");
+        System.out.println("|| 2 - Equipamento com maior preço              ||");
+        System.out.println("|| 3 - Equipamento com maior quantidade         ||");
+        System.out.println("|| 4 - Equipamentos com estoque baixo           ||");
+        System.out.print("Escolha uma opção: ");
+        double BuscaPrecoAvancada = read.nextDouble();
+
+        return BuscaPrecoAvancada;
     }
 
 }
